@@ -1,6 +1,8 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
+import * as cheerio from "cheerio";
+import axios from "axios";
 
 const app = express();
 app.use(cors());
@@ -16,7 +18,20 @@ app.get("/", (req, res) => {
    res.send("Hello World!");
 });
 
-app.post("/", (req, res) => {
-   console.log(req.body);
-   res.send(req.body);
+app.post("/", async (req, res) => {
+   const { url } = req.body;
+   console.log(url);
+
+   // const response = await axios.get(url);
+   // const $ = cheerio.load(response.data);
+
+   const { data: html } = await axios.get(url);
+   const $ = cheerio.load(html);
+
+   const scrapedData = $("title").text();
+
+   console.log($.root().html());
+
+   console.log("title ==>> ", scrapedData);
+   res.json(scrapedData);
 });
