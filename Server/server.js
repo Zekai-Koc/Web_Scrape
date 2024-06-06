@@ -35,3 +35,7 @@ app.post("/", async (req, res) => {
    console.log("title ==>> ", scrapedData);
    res.json(scrapedData);
 });
+
+app.put("/", (req, res) => {
+   res.send("This is a PUT request");
+});
