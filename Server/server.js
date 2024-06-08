@@ -22,11 +22,12 @@ app.post("/", async (req, res) => {
    const { url } = req.body;
    console.log(url);
 
-   // const response = await axios.get(url);
-   // const $ = cheerio.load(response.data);
+   // const { data: html } = await axios.get(url);
+   // const $ = cheerio.load(html);
 
-   const { data: html } = await axios.get(url);
-   const $ = cheerio.load(html);
+   const $ = cheerio.load(
+      "C:/Users/zek/Desktop/MyProjects/Web_Scrape/data/dummy.html"
+   );
 
    const scrapedData = $("title").text();
 
@@ -34,8 +35,4 @@ app.post("/", async (req, res) => {
 
    console.log("title ==>> ", scrapedData);
    res.json(scrapedData);
-});
-
-app.put("/", (req, res) => {
-   res.send("This is a PUT request");
 });

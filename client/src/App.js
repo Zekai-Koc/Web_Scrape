@@ -3,10 +3,13 @@ import React, { useState } from "react";
 
 function App() {
    // const [url, setUrl] = useState("https://clarusway.com/");
+   // const [url, setUrl] = useState(
+   //    "https://phet-dev.colorado.edu/html/build-an-atom/0.0.0-3/simple-text-only-test-page.html"
+   // );
+
    const [url, setUrl] = useState(
-      "https://phet-dev.colorado.edu/html/build-an-atom/0.0.0-3/simple-text-only-test-page.html"
+      "C:/Users/zek/Desktop/MyProjects/Web_Scrape/data/dummy.html"
    );
-   // const [pdfLink, setPdfLink] = useState("");
 
    const handleSubmit = async (e) => {
       e.preventDefault();
@@ -24,7 +27,6 @@ function App() {
          }
          const data = await response.json();
          console.log(data);
-         // setPdfLink(data.pdfLink);
       } catch (error) {
          console.error("Error:", error.message);
       }
@@ -42,21 +44,17 @@ function App() {
       <div className="App">
          <form onSubmit={handleSubmit}>
             <label>
-               Web Sitesi URL'si:
+               Web Site URL:
                <input
                   type="text"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
+                  className="input-url"
                />
             </label>
             <button type="submit">Scrape&Create PDF</button>
          </form>
          <button onClick={handleButtonClick}>Get Request</button>
-         {/* {pdfLink && (
-            <a href={`http://localhost:3000${pdfLink}`} download>
-               PDF'yi İndir
-            </a>
-         )} */}
       </div>
    );
 }
