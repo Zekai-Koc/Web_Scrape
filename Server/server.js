@@ -301,28 +301,3 @@ app.post("/", async (req, res) => {
 // // //       res.status(500).json({ error: error.message });
 // // //    }
 // // // });
-
-// // // // const scrapedData = $("title").text();
-// // // // console.log($.root().html());
-// // // // console.log("title ==>> ", scrapedData);
-// // // // const { data: html } = await axios.get(url);
-// // // // const $ = cheerio.load(html);
-
-// // // // const $ = cheerio.load(
-// // // //    "C:/Users/zek/Desktop/MyProjects/Web_Scrape/data/dummy.html"
-// // // // );
-// // // // const addressLines = [];
-
-// // // // $(".address-lines").each((index, element) => {
-// // // //    addressLines.push($(element).text().trim());
-// // // // });
-
-// // // // console.log("Address Lines:", addressLines);
-// // // // console.log("$(.address-lines):", $(".address-lines"));
-// // // //
-// // // // const scrapedData = $("title").text();
-
-// // // // console.log($.root().html());
-
-// // // // console.log("title ==>> ", $.html());
-// // // // res.json("addressLines");
