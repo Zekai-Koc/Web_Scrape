@@ -104,24 +104,3 @@ export default App;
 //          .then((data) => console.log(data))
 //          .catch((error) => console.error("Error:", error.message));
 //    };
-
-//    return (
-//       <div className="App">
-//          <form onSubmit={handleSubmit}>
-//             <label>
-//                Web Site URL:
-//                <input
-//                   type="text"
-//                   value={url}
-//                   onChange={(e) => setUrl(e.target.value)}
-//                   className="input-url"
-//                />
-//             </label>
-//             <button type="submit">Scrape&Create PDF</button>
-//          </form>
-//          <button onClick={handleButtonClick}>Get Request</button>
-//       </div>
-//    );
-// }
-
-// export default App;
