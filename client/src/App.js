@@ -96,11 +96,3 @@ export default App;
 //          console.error("Error:", error.message);
 //       }
 //    };
-
-//    const handleButtonClick = () => {
-//       console.log("Button Clicked");
-//       fetch("http://localhost:7000")
-//          .then((response) => response.text())
-//          .then((data) => console.log(data))
-//          .catch((error) => console.error("Error:", error.message));
-//    };
