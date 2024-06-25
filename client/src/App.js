@@ -62,16 +62,3 @@ function App() {
 }
 
 export default App;
-
-// import "./App.css";
-// import React, { useState } from "react";
-
-// function App() {
-//    // const [url, setUrl] = useState("https://clarusway.com/");
-//    // const [url, setUrl] = useState(
-//    //    "https://phet-dev.colorado.edu/html/build-an-atom/0.0.0-3/simple-text-only-test-page.html"
-//    // );
-
-//    const [url, setUrl] = useState(
-//       "C:/Users/zek/Desktop/MyProjects/Web_Scrape/data/dummy.html"
-//    );
