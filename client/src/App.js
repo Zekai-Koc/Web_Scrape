@@ -75,24 +75,3 @@ export default App;
 //    const [url, setUrl] = useState(
 //       "C:/Users/zek/Desktop/MyProjects/Web_Scrape/data/dummy.html"
 //    );
-
-//    const handleSubmit = async (e) => {
-//       e.preventDefault();
-//       try {
-//          const response = await fetch("http://localhost:7000", {
-//             method: "POST",
-//             headers: {
-//                "Content-Type": "application/json",
-//             },
-//             body: JSON.stringify({ url }),
-//          });
-//          if (!response.ok) {
-//             const errorData = await response.json();
-//             throw new Error(errorData.error || "Unknown error");
-//          }
-//          const data = await response.json();
-//          console.log(data);
-//       } catch (error) {
-//          console.error("Error:", error.message);
-//       }
-//    };
