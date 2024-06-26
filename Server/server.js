@@ -277,27 +277,3 @@ app.post("/", async (req, res) => {
 // // // app.post("/", async (req, res) => {
 // // //    const { url } = req.body;
 // // //    console.log(url);
-
-// // //    try {
-// // //       let html;
-// // //       if (url.startsWith("http") || url.startsWith("https")) {
-// // //          const response = await axios.get(url);
-// // //          html = response.data;
-// // //       } else {
-// // //          const filePath = path.resolve(url);
-// // //          html = fs.readFileSync(filePath, "utf-8");
-// // //       }
-
-// // //       const $ = cheerio.load(html);
-
-// // //       const addressLines = [];
-// // //       $(".address-lines .line").each((index, element) => {
-// // //          addressLines.push($(element).text().trim());
-// // //       });
-
-// // //       res.json({ addressLines: addressLines });
-// // //    } catch (error) {
-// // //       console.error("Error:", error.message);
-// // //       res.status(500).json({ error: error.message });
-// // //    }
-// // // });
