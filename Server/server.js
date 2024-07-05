@@ -35,6 +35,14 @@ app.post("/", async (req, res) => {
          html = fs.readFileSync(filePath, "utf-8");
       }
 
+      console.log(
+         "----------------------------------------------------------------------------------------------"
+      );
+      console.log(html);
+      console.log(
+         "----------------------------------------------------------------------------------------------"
+      );
+
       const $ = cheerio.load(html);
 
       // Extract address lines
